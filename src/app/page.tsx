@@ -37,7 +37,7 @@ export default function Home() {
                 className="text-center text-sm text-white font-montserrat font-medium h-[90vh] flex flex-col"
             >
                 <div className="my-auto px-8">
-                    <h1 className="font-inter font-thin text-4xl text-cyan-300 tracking-wide">
+                    <h1 className="font-inter font-semibold text-4xl text-cyan-300 tracking-widest lg:text-5xl">
                         Aden Teo
                     </h1>
                     <Image
@@ -47,14 +47,14 @@ export default function Home() {
                         height={150}
                         className="mx-auto my-5"
                     ></Image>
-                    <h2 className="font-montserrat font-normal text-base">
+                    <h2 className="font-montserrat font-normal text-base lg:text-2xl">
                         Computer Engineering Undergraduate
                     </h2>
-                    <h3 className="font-montserrat font-normal text-xs">
+                    <h3 className="font-montserrat font-normal text-xs lg:text-xl">
                         National University of Singapore
                     </h3>
                     <div></div>
-                    <p className="font-montserrat font-normal text-sm my-5 max-w-2xl mx-auto">
+                    <p className="font-montserrat font-normal text-sm my-5 max-w-2xl mx-auto lg:text-base">
                         An aspiring Computer Engineer with a strong interest in
                         leveraging{" "}
                         <span className="text-cyan-300">blockchain</span> and{" "}
@@ -65,7 +65,7 @@ export default function Home() {
                         <a href="https://github.com/adenteo" target="_blank">
                             <BsGithub
                                 size={30}
-                                className="cursor-pointer hover:text-cyan-800 mx-5"
+                                className="cursor-pointer hover:text-cyan-300 mx-5"
                             />
                         </a>
                         <a
@@ -74,7 +74,7 @@ export default function Home() {
                         >
                             <BsLinkedin
                                 size={30}
-                                className="cursor-pointer hover:text-cyan-800 mx-5"
+                                className="cursor-pointer hover:text-cyan-300 mx-5"
                             />
                         </a>
                     </div>
@@ -107,7 +107,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-800"
+                                className="font-montserrat font-semibold text-cyan-300"
                             >
                                 E-commerce Checkout Extension
                             </Typography>
@@ -120,7 +120,7 @@ export default function Home() {
                             automate purchasing processes on major e-commerce
                             websites, such as Shopify, Adidas and Nike, reducing
                             checkout duration by up to{" "}
-                            <span className="text-cyan-800">80%.</span>
+                            <span className="text-cyan-300">80%.</span>
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="HTML">
@@ -176,7 +176,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-800"
+                                className="font-montserrat font-semibold text-cyan-300"
                             >
                                 NUSports Hub
                             </Typography>
@@ -237,7 +237,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-800"
+                                className="font-montserrat font-semibold text-cyan-300"
                             >
                                 Stock Monitor
                             </Typography>
@@ -295,7 +295,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-800"
+                                className="font-montserrat font-semibold text-cyan-300"
                             >
                                 Laundry Bot
                             </Typography>
@@ -305,8 +305,8 @@ export default function Home() {
                             className="font-montserrat text-sm"
                         >
                             A Telegram laundry bot to update hostel residents on
-                            real-time statuses of the appliances in the common
-                            laundry room.
+                            real-time statuses of appliances in common laundry
+                            room.
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="C++">
@@ -351,72 +351,65 @@ export default function Home() {
                 </Typography>
                 <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem]">
                     <Typography
-                        variant="h5"
+                        variant="h4"
                         color="white"
-                        className="font-montserrat font-semibold text-center my-5 text-cyan-800"
+                        className="font-montserrat font-semibold text-center my-3 text-cyan-300"
                     >
                         Software Engineer Intern
                     </Typography>
                     <Typography
-                        variant="h6"
                         color="white"
-                        className="font-montserrat font-thin text-center my-5"
+                        className="font-montserrat font-normal text-center"
                     >
                         Algo Foundry
                     </Typography>
                     <Typography
-                        variant="h6"
                         color="white"
-                        className="font-montserrat font-thin text-center my-5 text-xs"
+                        className="font-montserrat text-center text-xs"
                     >
                         2023 May - 2023 August
                     </Typography>
                     <Typography
-                        variant="h6"
                         color="white"
-                        className="font-montserrat font-normal text-center my-5 text-xs block"
+                        className="font-montserrat text-center my-5 text-sm block"
                     >
                         - To be updated
                     </Typography>
                 </div>
                 <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem]">
                     <Typography
-                        variant="h5"
+                        variant="h4"
                         color="white"
-                        className="font-montserrat font-semibold text-center my-5 text-cyan-800"
+                        className="font-montserrat font-semibold text-center my-3 text-cyan-300"
                     >
                         Freelance Software Developer
                     </Typography>
                     <Typography
-                        variant="h6"
                         color="white"
-                        className="font-montserrat font-thin text-center my-5"
+                        className="font-montserrat text-center"
                     >
                         Fiverr
                     </Typography>
                     <Typography
-                        variant="h6"
                         color="white"
-                        className="font-montserrat font-thin text-center my-5 text-xs"
+                        className="font-montserrat text-center text-xs"
                     >
                         2021 April - 2021 June
                     </Typography>
                     <Typography
-                        variant="h6"
                         color="white"
-                        className="font-montserrat font-normal text-center my-5 text-xs block px-5"
+                        className="font-montserrat text-center my-5 text-sm block px-5"
                     >
                         - Delivered 5+ small to medium-scale projects within a
                         month.
                     </Typography>
                     <Typography
-                        variant="h6"
                         color="white"
-                        className="font-montserrat font-normal text-center my-5 text-xs block px-5"
+                        className="font-montserrat text-center my-5 text-sm block px-5"
                     >
                         - Developed Google Chrome extensions and Python
                         automation scripts to enable continuous monitoring of
-                        E-commerce websites and perform automatic checkout.
+                        E-commerce websites and automatic checkouts.
                     </Typography>
                 </div>
             </section>
