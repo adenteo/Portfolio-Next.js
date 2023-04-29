@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { BsLinkedin, BsGithub, BsDiscord } from "react-icons/bs";
-import { AiFillHtml5, AiFillChrome } from "react-icons/ai";
+import { AiFillHtml5, AiFillChrome, AiOutlineDown } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoPython } from "react-icons/io";
 import { IoHardwareChipOutline } from "react-icons/io5";
 import { MdOutlineSensorDoor } from "react-icons/md";
@@ -34,7 +34,7 @@ export default function Home() {
             <Navbar />
             <section
                 id="home"
-                className="text-center text-sm text-white font-montserrat font-medium h-[90vh] flex flex-col"
+                className="text-center text-sm text-white font-montserrat font-medium h-[95vh] flex flex-col"
             >
                 <div className="my-auto px-8">
                     <h1 className="font-inter font-semibold text-4xl text-cyan-300 lg:text-5xl">
@@ -43,8 +43,8 @@ export default function Home() {
                     <Image
                         src="/profile-pic-round.png"
                         alt="Aden Teo"
-                        width={150}
-                        height={150}
+                        width={175}
+                        height={175}
                         className="mx-auto my-5"
                     ></Image>
                     <h2 className="font-montserrat font-normal text-base lg:text-2xl">
@@ -76,6 +76,12 @@ export default function Home() {
                                 size={30}
                                 className="cursor-pointer hover:text-cyan-300 mx-5"
                             />
+                        </a>
+                    </div>
+                    <div className="my-5 hover:text-cyan-800 cursor-pointer animate-bounce">
+                        <a href="#projects">
+                            Scroll down
+                            <AiOutlineDown className="mx-auto" />
                         </a>
                     </div>
                 </div>
@@ -153,6 +159,7 @@ export default function Home() {
                             size="lg"
                             fullWidth={true}
                             color="cyan"
+                            className="font-montserrat normal-case"
                         >
                             View on Github
                         </Button>
@@ -214,6 +221,7 @@ export default function Home() {
                             onClick={onClickUrl(
                                 "https://github.com/adenteo/NUSportsHub-final"
                             )}
+                            className="font-montserrat normal-case"
                         >
                             View on Github
                         </Button>
@@ -272,6 +280,7 @@ export default function Home() {
                             onClick={onClickUrl(
                                 "https://github.com/adenteo/footlockerMonitor"
                             )}
+                            className="font-montserrat normal-case"
                         >
                             View on Github
                         </Button>
@@ -334,6 +343,7 @@ export default function Home() {
                             onClick={onClickUrl(
                                 "https://github.com/GaruLaundry"
                             )}
+                            className="font-montserrat normal-case"
                         >
                             View on Github
                         </Button>

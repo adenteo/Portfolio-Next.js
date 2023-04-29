@@ -11,7 +11,14 @@ import { BiHomeAlt2 } from "react-icons/bi";
 
 export default function Example() {
     const [openNav, setOpenNav] = React.useState(false);
-
+    const openNewTab = (url: string): void => {
+        const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+        if (newWindow) newWindow.opener = null;
+    };
+    const onClickUrl =
+        (url: string): (() => void) =>
+        () =>
+            openNewTab(url);
     React.useEffect(() => {
         window.addEventListener(
             "resize",
@@ -51,10 +58,9 @@ export default function Example() {
                 variant="gradient"
                 className="font-montserrat font-extrabold normal-case"
                 color="cyan"
+                onClick={onClickUrl("https://www.linkedin.com/in/aden-teo/")}
             >
-                <a href="https://www.linkedin.com/in/aden-teo" target="_blank">
-                    Connect with me
-                </a>
+                Connect with me
             </Button>
         </ul>
     );
