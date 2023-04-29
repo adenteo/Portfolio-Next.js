@@ -186,7 +186,7 @@ export default function Home() {
                             className="font-montserrat text-sm"
                         >
                             An all-in-one mobile application built for NUS
-                            students' sporting needs.
+                            students{"'"} sporting needs.
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="React Native">
