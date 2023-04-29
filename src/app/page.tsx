@@ -1,116 +1,425 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
+import Navbar from "./components/Navbar";
+import { BsLinkedin, BsGithub, BsDiscord } from "react-icons/bs";
+import { AiFillHtml5, AiFillChrome } from "react-icons/ai";
+import { IoLogoCss3, IoLogoJavascript, IoLogoPython } from "react-icons/io";
+import { IoHardwareChipOutline } from "react-icons/io5";
+import { MdOutlineSensorDoor } from "react-icons/md";
+import { FaReact } from "react-icons/fa";
+import { SiSupabase } from "react-icons/si";
+import { TbBrandCpp } from "react-icons/tb";
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    Typography,
+    Button,
+    Tooltip,
+} from "@material-tailwind/react";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    const openNewTab = (url: string): void => {
+        const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+        if (newWindow) newWindow.opener = null;
+    };
+    const onClickUrl =
+        (url: string): (() => void) =>
+        () =>
+            openNewTab(url);
+    return (
+        <main>
+            <Navbar />
+            <section
+                id="home"
+                className="text-center text-sm text-white font-montserrat font-medium h-[90vh] flex flex-col"
+            >
+                <div className="my-auto">
+                    <h1 className="font-inter font-thin text-4xl text-cyan-300 tracking-wide">
+                        Aden Teo
+                    </h1>
+                    <Image
+                        src="/profile-pic-round.png"
+                        alt="Aden Teo"
+                        width={150}
+                        height={150}
+                        className="mx-auto my-5"
+                    ></Image>
+                    <h2 className="font-montserrat font-normal text-base">
+                        Computer Engineering Undergraduate
+                    </h2>
+                    <h3 className="font-montserrat font-normal text-xs">
+                        National University of Singapore
+                    </h3>
+                    <div></div>
+                    <p className="font-montserrat font-normal text-sm my-5 max-w-2xl mx-auto">
+                        An aspiring Computer Engineer with a strong interest in
+                        leveraging{" "}
+                        <span className="text-cyan-300">blockchain</span> and{" "}
+                        <span className="text-cyan-300">AI</span> technologies
+                        to improve lives. Feel free to connect with me!
+                    </p>
+                    <div className="flex justify-center">
+                        <a href="https://github.com/adenteo" target="_blank">
+                            <BsGithub
+                                size={30}
+                                className="cursor-pointer hover:text-cyan-800 mx-5"
+                            />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/aden-teo/"
+                            target="_blank"
+                        >
+                            <BsLinkedin
+                                size={30}
+                                className="cursor-pointer hover:text-cyan-800 mx-5"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <Typography
+                variant="h2"
+                color="white"
+                className="font-montserrat font-thin text-center my-5"
+                id="projects"
+            >
+                Projects
+            </Typography>
+            <section className="p-8 grid lg:grid-cols-2 gap-y-10">
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                    <CardHeader
+                        floated={false}
+                        className="bg-transparent shadow-transparent"
+                    >
+                        <Image
+                            src="/chrome-extension.png"
+                            alt="e-commerce-checkout-extension"
+                            width="300"
+                            height="150"
+                            className="mx-auto p-2"
+                        />
+                    </CardHeader>
+                    <CardBody>
+                        <div className="mb-3 flex items-center justify-between">
+                            <Typography
+                                variant="h5"
+                                color="white"
+                                className="font-montserrat font-semibold text-cyan-800"
+                            >
+                                E-commerce Checkout Extension
+                            </Typography>
+                        </div>
+                        <Typography
+                            color="white"
+                            className="font-montserrat text-sm"
+                        >
+                            A custom Google Chrome extension designed to
+                            automate purchasing processes on major e-commerce
+                            websites, such as Shopify, Adidas and Nike, reducing
+                            checkout duration by up to{" "}
+                            <span className="text-cyan-800">80%.</span>
+                        </Typography>
+                        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                            <Tooltip content="HTML">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <AiFillHtml5 size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="CSS">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <IoLogoCss3 size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="JavaScript">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <IoLogoJavascript size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="Chrome Extension API">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <AiFillChrome size={20} />
+                                </span>
+                            </Tooltip>
+                        </div>
+                    </CardBody>
+                    <CardFooter className="pt-3">
+                        <Button
+                            onClick={onClickUrl(
+                                "https://github.com/adenteo/chromeExtension"
+                            )}
+                            size="lg"
+                            fullWidth={true}
+                            color="cyan"
+                        >
+                            View on Github
+                        </Button>
+                    </CardFooter>
+                </Card>
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                    <CardHeader
+                        floated={false}
+                        className="bg-transparent shadow-transparent my-auto"
+                    >
+                        <Image
+                            src="/mobile-app.png"
+                            alt="nus-sports-hub"
+                            width="300"
+                            height="100"
+                            className="mx-auto p-2"
+                        />
+                    </CardHeader>
+                    <CardBody>
+                        <div className="mb-3 flex items-center justify-between">
+                            <Typography
+                                variant="h5"
+                                color="white"
+                                className="font-montserrat font-semibold text-cyan-800"
+                            >
+                                NUSports Hub
+                            </Typography>
+                        </div>
+                        <Typography
+                            color="white"
+                            className="font-montserrat text-sm"
+                        >
+                            An all-in-one mobile application built for NUS
+                            students' sporting needs.
+                        </Typography>
+                        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                            <Tooltip content="React Native">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <FaReact size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="JavaScript">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <IoLogoJavascript size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="Supabase">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <SiSupabase size={20} />
+                                </span>
+                            </Tooltip>
+                        </div>
+                    </CardBody>
+                    <CardFooter className="pt-3">
+                        <Button
+                            size="lg"
+                            fullWidth={true}
+                            color="cyan"
+                            onClick={onClickUrl(
+                                "https://github.com/adenteo/NUSportsHub-final"
+                            )}
+                        >
+                            View on Github
+                        </Button>
+                    </CardFooter>
+                </Card>
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                    <CardHeader
+                        floated={false}
+                        className="bg-transparent shadow-transparent"
+                    >
+                        <Image
+                            src="/stock-monitor-new-2.png"
+                            alt="stock-monitor"
+                            width="300"
+                            height="100"
+                            className="mx-auto p-2"
+                        />
+                    </CardHeader>
+                    <CardBody>
+                        <div className="mb-3 flex items-center justify-between">
+                            <Typography
+                                variant="h5"
+                                color="white"
+                                className="font-montserrat font-semibold text-cyan-800"
+                            >
+                                Stock Monitor
+                            </Typography>
+                        </div>
+                        <Typography
+                            color="white"
+                            className="font-montserrat text-sm"
+                        >
+                            An inventory scraper that obtains available sizes
+                            for targeted products from major e-commerce sites
+                            such as Footlocker and Shopify. Integrated with
+                            Discord API.
+                        </Typography>
+                        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                            <Tooltip content="Python">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <IoLogoPython size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="Discord API">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <BsDiscord size={20} />
+                                </span>
+                            </Tooltip>
+                        </div>
+                    </CardBody>
+                    <CardFooter className="pt-3">
+                        <Button
+                            size="lg"
+                            fullWidth={true}
+                            color="cyan"
+                            onClick={onClickUrl(
+                                "https://github.com/adenteo/footlockerMonitor"
+                            )}
+                        >
+                            View on Github
+                        </Button>
+                    </CardFooter>
+                </Card>
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                    <CardHeader
+                        floated={false}
+                        className="bg-transparent shadow-transparent my-auto"
+                    >
+                        <Image
+                            src="/laundry-bot-new-2.png"
+                            alt="e-commerce-checkout-extension"
+                            width={300}
+                            height={200}
+                            className="mx-auto p-2"
+                        />
+                    </CardHeader>
+                    <CardBody>
+                        <div className="mb-3 flex items-center justify-between">
+                            <Typography
+                                variant="h5"
+                                color="white"
+                                className="font-montserrat font-semibold text-cyan-800"
+                            >
+                                Laundry Bot
+                            </Typography>
+                        </div>
+                        <Typography
+                            color="white"
+                            className="font-montserrat text-sm"
+                        >
+                            A Telegram laundry bot to update hostel residents on
+                            real-time statuses of the appliances in the common
+                            laundry room.
+                        </Typography>
+                        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                            <Tooltip content="C++">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <TbBrandCpp size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="ESP32">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <IoHardwareChipOutline size={20} />
+                                </span>
+                            </Tooltip>
+                            <Tooltip content="MC-32 Door Sensor">
+                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                    <MdOutlineSensorDoor size={20} />
+                                </span>
+                            </Tooltip>
+                        </div>
+                    </CardBody>
+                    <CardFooter className="pt-3">
+                        <Button
+                            size="lg"
+                            fullWidth={true}
+                            color="cyan"
+                            onClick={onClickUrl(
+                                "https://github.com/GaruLaundry"
+                            )}
+                        >
+                            View on Github
+                        </Button>
+                    </CardFooter>
+                </Card>
+            </section>
+            <section>
+                <Typography
+                    id="experience"
+                    variant="h2"
+                    color="white"
+                    className="font-montserrat font-thin text-center my-5"
+                >
+                    Experience
+                </Typography>
+                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem]">
+                    <Typography
+                        variant="h5"
+                        color="white"
+                        className="font-montserrat font-semibold text-center my-5 text-cyan-800"
+                    >
+                        Software Engineer Intern
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        color="white"
+                        className="font-montserrat font-thin text-center my-5"
+                    >
+                        Algo Foundry
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        color="white"
+                        className="font-montserrat font-thin text-center my-5 text-xs"
+                    >
+                        2023 May - 2023 August
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        color="white"
+                        className="font-montserrat font-normal text-center my-5 text-xs block"
+                    >
+                        - To be updated
+                    </Typography>
+                </div>
+                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem]">
+                    <Typography
+                        variant="h5"
+                        color="white"
+                        className="font-montserrat font-semibold text-center my-5 text-cyan-800"
+                    >
+                        Freelance Software Developer
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        color="white"
+                        className="font-montserrat font-thin text-center my-5"
+                    >
+                        Fiverr
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        color="white"
+                        className="font-montserrat font-thin text-center my-5 text-xs"
+                    >
+                        2021 April - 2021 June
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        color="white"
+                        className="font-montserrat font-normal text-center my-5 text-xs block px-5"
+                    >
+                        - Delivered 5+ small to medium-scale projects within a
+                        month.
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        color="white"
+                        className="font-montserrat font-normal text-center my-5 text-xs block px-5"
+                    >
+                        - Developed Google Chrome extensions and Python
+                        automation scripts to enable continuous monitoring of
+                        E-commerce websites and perform automatic checkout.
+                    </Typography>
+                </div>
+            </section>
+        </main>
+    );
 }
