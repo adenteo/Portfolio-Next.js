@@ -37,7 +37,7 @@ export default function Home() {
                 className="text-center text-sm text-white font-montserrat font-medium h-[90vh] flex flex-col"
             >
                 <div className="my-auto px-8">
-                    <h1 className="font-inter font-semibold text-4xl text-cyan-300 tracking-widest lg:text-5xl">
+                    <h1 className="font-inter font-semibold text-4xl text-cyan-300 lg:text-5xl">
                         Aden Teo
                     </h1>
                     <Image
