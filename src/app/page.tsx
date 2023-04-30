@@ -125,7 +125,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-500"
+                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-800"
                             >
                                 E-commerce Checkout Extension
                             </Typography>
@@ -138,28 +138,28 @@ export default function Home() {
                             automate purchasing processes on major e-commerce
                             websites, such as Shopify, Adidas and Nike, reducing
                             checkout duration by up to{" "}
-                            <span className="text-cyan-300 dark:text-blue-500">
+                            <span className="text-cyan-300 dark:text-blue-800">
                                 80%.
                             </span>
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="HTML">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <AiFillHtml5 size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="CSS">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoCss3 size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="JavaScript">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoJavascript size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Chrome Extension API">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <AiFillChrome size={20} />
                                 </span>
                             </Tooltip>
@@ -197,7 +197,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-500"
+                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-800"
                             >
                                 NUSports Hub
                             </Typography>
@@ -211,17 +211,17 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="React Native">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <FaReact size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="JavaScript">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoJavascript size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Supabase">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <SiSupabase size={20} />
                                 </span>
                             </Tooltip>
@@ -259,7 +259,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-500"
+                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-800"
                             >
                                 Stock Monitor
                             </Typography>
@@ -275,12 +275,12 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="Python">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoPython size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Discord API">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <BsDiscord size={20} />
                                 </span>
                             </Tooltip>
@@ -318,7 +318,7 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300  dark:text-blue-500"
+                                className="font-montserrat font-semibold text-cyan-300  dark:text-blue-800"
                             >
                                 Laundry Bot
                             </Typography>
@@ -333,17 +333,17 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="C++">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <TbBrandCpp size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="ESP32">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoHardwareChipOutline size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="MC-32 Door Sensor">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <MdOutlineSensorDoor size={20} />
                                 </span>
                             </Tooltip>
@@ -369,7 +369,7 @@ export default function Home() {
                     id="experience"
                     variant="h2"
                     color="white"
-                    className="font-montserrat font-thin text-center my-5"
+                    className="font-montserrat font-thin text-center my-5 dark:text-black"
                 >
                     Experience
                 </Typography>
@@ -377,19 +377,19 @@ export default function Home() {
                     <Typography
                         variant="h4"
                         color="white"
-                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-500"
+                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-800"
                     >
                         Software Engineer Intern
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat font-medium text-center dark:text-blue-800"
+                        className="font-montserrat font-medium text-center text-cyan-300 dark:text-blue-800"
                     >
                         Algo Foundry
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat font-medium text-center text-xs dark:text-blue-800"
+                        className="font-montserrat font-medium text-center text-cyan-300 text-xs dark:text-blue-800"
                     >
                         2023 May - 2023 August
                     </Typography>
@@ -404,19 +404,19 @@ export default function Home() {
                     <Typography
                         variant="h4"
                         color="white"
-                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-500"
+                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-800"
                     >
                         Freelance Software Developer
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat font-medium text-center dark:text-blue-800"
+                        className="font-montserrat font-medium text-center text-cyan-300 dark:text-blue-800"
                     >
                         Fiverr
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat font-medium text-center text-xs dark:text-blue-800"
+                        className="font-montserrat font-medium text-center text-xs text-cyan-300 dark:text-blue-800"
                     >
                         2021 April - 2021 June
                     </Typography>

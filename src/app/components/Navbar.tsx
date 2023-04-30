@@ -62,8 +62,8 @@ export default function NavBar({ darkState, setDarkState }: NavbarProps) {
             </Typography>
             <Button
                 variant="gradient"
-                className="font-montserrat font-normal normal-case dark:bg-cyan-600"
-                color="cyan"
+                color={darkState ? "blue" : "cyan"}
+                className="font-montserrat font-normal normal-case"
                 onClick={onClickUrl("https://www.linkedin.com/in/aden-teo/")}
             >
                 Connect with me
