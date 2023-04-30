@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import CustomFooter from "./components/CustomFooter";
 import { BsLinkedin, BsGithub, BsDiscord } from "react-icons/bs";
 import { AiFillHtml5, AiFillChrome, AiOutlineDown } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoPython } from "react-icons/io";
@@ -35,7 +36,7 @@ export default function Home() {
         () =>
             openNewTab(url);
     return (
-        <main className={darkMode ? "dark bg-gray-100" : ""}>
+        <main className={darkMode ? "dark bg-white" : ""}>
             <Navbar darkState={darkMode} setDarkState={updateDarkMode} />
             <section
                 id="home"
@@ -89,7 +90,7 @@ export default function Home() {
                             />
                         </a>
                     </div>
-                    <div className="my-5 hover:text-cyan-300 cursor-pointer animate-bounce dark:text-black dark:hover:text-cyan-400">
+                    <div className="my-10 hover:text-cyan-300 cursor-pointer animate-bounce dark:text-black dark:hover:text-cyan-400">
                         <a href="#projects">
                             Scroll down
                             <AiOutlineDown className="mx-auto" />
@@ -100,13 +101,13 @@ export default function Home() {
             <Typography
                 variant="h2"
                 color="white"
-                className="font-montserrat font-thin text-center my-5  dark:text-black"
+                className="font-montserrat font-normal text-center my-5  dark:text-black"
                 id="projects"
             >
                 Projects
             </Typography>
             <section className="p-8 grid lg:grid-cols-2 gap-y-10">
-                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-200">
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-100">
                     <CardHeader
                         floated={false}
                         className="bg-transparent shadow-transparent"
@@ -124,41 +125,41 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300 dark:text-orange-800"
+                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-500"
                             >
                                 E-commerce Checkout Extension
                             </Typography>
                         </div>
                         <Typography
                             color="white"
-                            className="font-montserrat text-sm dark:text-blue-gray-900"
+                            className="font-montserrat font-medium text-sm dark:text-black"
                         >
                             A custom Google Chrome extension designed to
                             automate purchasing processes on major e-commerce
                             websites, such as Shopify, Adidas and Nike, reducing
                             checkout duration by up to{" "}
-                            <span className="text-cyan-300 dark:text-orange-800">
+                            <span className="text-cyan-300 dark:text-blue-500">
                                 80%.
                             </span>
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="HTML">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <AiFillHtml5 size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="CSS">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoCss3 size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="JavaScript">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoJavascript size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Chrome Extension API">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <AiFillChrome size={20} />
                                 </span>
                             </Tooltip>
@@ -172,13 +173,13 @@ export default function Home() {
                             size="lg"
                             fullWidth={true}
                             color="cyan"
-                            className="font-montserrat normal-case"
+                            className="font-montserrat normal-case dark:bg-blue-500"
                         >
                             View on Github
                         </Button>
                     </CardFooter>
                 </Card>
-                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-100">
                     <CardHeader
                         floated={false}
                         className="bg-transparent shadow-transparent my-auto"
@@ -196,31 +197,31 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300"
+                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-500"
                             >
                                 NUSports Hub
                             </Typography>
                         </div>
                         <Typography
                             color="white"
-                            className="font-montserrat text-sm"
+                            className="font-montserrat font-medium text-sm dark:text-black"
                         >
                             An all-in-one mobile application built for NUS
                             students{"'"} sporting needs.
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="React Native">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <FaReact size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="JavaScript">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoJavascript size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Supabase">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <SiSupabase size={20} />
                                 </span>
                             </Tooltip>
@@ -234,13 +235,13 @@ export default function Home() {
                             onClick={onClickUrl(
                                 "https://github.com/adenteo/NUSportsHub-final"
                             )}
-                            className="font-montserrat normal-case"
+                            className="font-montserrat normal-case dark:bg-blue-500"
                         >
                             View on Github
                         </Button>
                     </CardFooter>
                 </Card>
-                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-100">
                     <CardHeader
                         floated={false}
                         className="bg-transparent shadow-transparent"
@@ -258,14 +259,14 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300"
+                                className="font-montserrat font-semibold text-cyan-300 dark:text-blue-500"
                             >
                                 Stock Monitor
                             </Typography>
                         </div>
                         <Typography
                             color="white"
-                            className="font-montserrat text-sm"
+                            className="font-montserrat font-medium text-sm dark:text-black"
                         >
                             An inventory scraper that obtains available sizes
                             for targeted products from major e-commerce sites
@@ -274,12 +275,12 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="Python">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoPython size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Discord API">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <BsDiscord size={20} />
                                 </span>
                             </Tooltip>
@@ -293,13 +294,13 @@ export default function Home() {
                             onClick={onClickUrl(
                                 "https://github.com/adenteo/footlockerMonitor"
                             )}
-                            className="font-montserrat normal-case"
+                            className="font-montserrat normal-case dark:bg-blue-500"
                         >
                             View on Github
                         </Button>
                     </CardFooter>
                 </Card>
-                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-100">
                     <CardHeader
                         floated={false}
                         className="bg-transparent shadow-transparent my-auto"
@@ -317,14 +318,14 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300"
+                                className="font-montserrat font-semibold text-cyan-300  dark:text-blue-500"
                             >
                                 Laundry Bot
                             </Typography>
                         </div>
                         <Typography
                             color="white"
-                            className="font-montserrat text-sm"
+                            className="font-montserrat font-medium text-sm dark:text-black"
                         >
                             A Telegram laundry bot to update hostel residents on
                             real-time statuses of appliances in common laundry
@@ -332,17 +333,17 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="C++">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <TbBrandCpp size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="ESP32">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoHardwareChipOutline size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="MC-32 Door Sensor">
-                                <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <MdOutlineSensorDoor size={20} />
                                 </span>
                             </Tooltip>
@@ -356,7 +357,7 @@ export default function Home() {
                             onClick={onClickUrl(
                                 "https://github.com/GaruLaundry"
                             )}
-                            className="font-montserrat normal-case"
+                            className="font-montserrat normal-case dark:bg-blue-500"
                         >
                             View on Github
                         </Button>
@@ -372,63 +373,63 @@ export default function Home() {
                 >
                     Experience
                 </Typography>
-                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem]">
+                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem] dark:bg-cyan-100">
                     <Typography
                         variant="h4"
                         color="white"
-                        className="font-montserrat font-semibold text-center my-3 text-cyan-300"
+                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-500"
                     >
                         Software Engineer Intern
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat font-normal text-center"
+                        className="font-montserrat font-medium text-center dark:text-blue-800"
                     >
                         Algo Foundry
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat text-center text-xs"
+                        className="font-montserrat font-medium text-center text-xs dark:text-blue-800"
                     >
                         2023 May - 2023 August
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat text-center my-5 text-sm block"
+                        className="font-montserra font-medium text-center my-5 text-sm block dark:text-black"
                     >
                         - To be updated
                     </Typography>
                 </div>
-                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem]">
+                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem] dark:bg-cyan-100">
                     <Typography
                         variant="h4"
                         color="white"
-                        className="font-montserrat font-semibold text-center my-3 text-cyan-300"
+                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-500"
                     >
                         Freelance Software Developer
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat text-center"
+                        className="font-montserrat font-medium text-center dark:text-blue-800"
                     >
                         Fiverr
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat text-center text-xs"
+                        className="font-montserrat font-medium text-center text-xs dark:text-blue-800"
                     >
                         2021 April - 2021 June
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat text-center my-5 text-sm block px-5"
+                        className="font-montserrat font-medium text-center my-5 text-sm block px-5 dark:text-black"
                     >
                         - Delivered 5+ small to medium-scale projects within a
                         month.
                     </Typography>
                     <Typography
                         color="white"
-                        className="font-montserrat text-center my-5 text-sm block px-5"
+                        className="font-montserrat font-medium text-center my-5 text-sm block px-5 dark:text-black"
                     >
                         - Developed Google Chrome extensions and Python
                         automation scripts to enable continuous monitoring of
@@ -436,6 +437,7 @@ export default function Home() {
                     </Typography>
                 </div>
             </section>
+            <CustomFooter></CustomFooter>
         </main>
     );
 }
