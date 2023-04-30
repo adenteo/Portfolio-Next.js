@@ -1,12 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { BsLinkedin, BsGithub, BsDiscord } from "react-icons/bs";
 import { AiFillHtml5, AiFillChrome, AiOutlineDown } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoPython } from "react-icons/io";
 import { IoHardwareChipOutline } from "react-icons/io5";
-import { MdOutlineSensorDoor } from "react-icons/md";
+import { MdOutlineSensorDoor, MdOutlineDarkMode } from "react-icons/md";
 import { FaReact } from "react-icons/fa";
 import { SiSupabase } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
@@ -21,6 +22,10 @@ import {
 } from "@material-tailwind/react";
 
 export default function Home() {
+    const [darkMode, setDarkMode] = useState(false);
+    const updateDarkMode = () => {
+        setDarkMode(!darkMode);
+    };
     const openNewTab = (url: string): void => {
         const newWindow = window.open(url, "_blank", "noopener,noreferrer");
         if (newWindow) newWindow.opener = null;
@@ -30,14 +35,14 @@ export default function Home() {
         () =>
             openNewTab(url);
     return (
-        <main>
-            <Navbar />
+        <main className={darkMode ? "dark bg-gray-100" : ""}>
+            <Navbar darkState={darkMode} setDarkState={updateDarkMode} />
             <section
                 id="home"
                 className="text-center text-sm text-white font-montserrat font-medium h-[95vh] flex flex-col"
             >
                 <div className="my-auto px-8">
-                    <h1 className="font-inter font-semibold text-4xl text-cyan-300 lg:text-5xl">
+                    <h1 className="font-montserrat font-normal text-4xl bg-gradient-to-t from-cyan-400 to-cyan-900 text-transparent bg-clip-text lg:text-6xl">
                         Aden Teo
                     </h1>
                     <Image
@@ -47,25 +52,31 @@ export default function Home() {
                         height={175}
                         className="mx-auto my-5"
                     ></Image>
-                    <h2 className="font-montserrat font-normal text-base lg:text-2xl">
+                    <h2 className="font-montserrat font-normal text-base lg:text-2xl dark:text-black">
                         Computer Engineering Undergraduate
                     </h2>
-                    <h3 className="font-montserrat font-normal text-xs lg:text-xl">
+                    <h3 className="font-montserrat font-normal text-xs lg:text-xl dark:text-black">
                         National University of Singapore
                     </h3>
                     <div></div>
-                    <p className="font-montserrat font-normal text-sm my-5 max-w-2xl mx-auto lg:text-base">
+                    <p className="font-montserrat font-normal text-sm my-5 max-w-2xl mx-auto lg:text-base dark:text-black">
                         An aspiring Computer Engineer with a strong interest in
                         leveraging{" "}
-                        <span className="text-cyan-300">blockchain</span> and{" "}
-                        <span className="text-cyan-300">AI</span> technologies
-                        to improve lives. Feel free to connect with me!
+                        <span className="text-cyan-300 dark:text-cyan-600">
+                            blockchain
+                        </span>{" "}
+                        and{" "}
+                        <span className="text-cyan-300 dark:text-cyan-600">
+                            AI
+                        </span>{" "}
+                        technologies to improve lives. Feel free to connect with
+                        me!
                     </p>
                     <div className="flex justify-center">
                         <a href="https://github.com/adenteo" target="_blank">
                             <BsGithub
                                 size={30}
-                                className="cursor-pointer hover:text-cyan-300 mx-5"
+                                className="cursor-pointer hover:text-cyan-300 mx-5 dark:text-black dark:hover:text-cyan-400"
                             />
                         </a>
                         <a
@@ -74,11 +85,11 @@ export default function Home() {
                         >
                             <BsLinkedin
                                 size={30}
-                                className="cursor-pointer hover:text-cyan-300 mx-5"
+                                className="cursor-pointer hover:text-cyan-300 mx-5 dark:text-black dark:hover:text-cyan-400"
                             />
                         </a>
                     </div>
-                    <div className="my-5 hover:text-cyan-800 cursor-pointer animate-bounce">
+                    <div className="my-5 hover:text-cyan-300 cursor-pointer animate-bounce dark:text-black dark:hover:text-cyan-400">
                         <a href="#projects">
                             Scroll down
                             <AiOutlineDown className="mx-auto" />
@@ -89,13 +100,13 @@ export default function Home() {
             <Typography
                 variant="h2"
                 color="white"
-                className="font-montserrat font-thin text-center my-5"
+                className="font-montserrat font-thin text-center my-5  dark:text-black"
                 id="projects"
             >
                 Projects
             </Typography>
             <section className="p-8 grid lg:grid-cols-2 gap-y-10">
-                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto">
+                <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-200">
                     <CardHeader
                         floated={false}
                         className="bg-transparent shadow-transparent"
@@ -113,20 +124,22 @@ export default function Home() {
                             <Typography
                                 variant="h5"
                                 color="white"
-                                className="font-montserrat font-semibold text-cyan-300"
+                                className="font-montserrat font-semibold text-cyan-300 dark:text-orange-800"
                             >
                                 E-commerce Checkout Extension
                             </Typography>
                         </div>
                         <Typography
                             color="white"
-                            className="font-montserrat text-sm"
+                            className="font-montserrat text-sm dark:text-blue-gray-900"
                         >
                             A custom Google Chrome extension designed to
                             automate purchasing processes on major e-commerce
                             websites, such as Shopify, Adidas and Nike, reducing
                             checkout duration by up to{" "}
-                            <span className="text-cyan-300">80%.</span>
+                            <span className="text-cyan-300 dark:text-orange-800">
+                                80%.
+                            </span>
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="HTML">
