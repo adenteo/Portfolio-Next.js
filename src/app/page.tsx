@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import CustomFooter from "./components/CustomFooter";
+import ExperienceCard from "./components/Experience";
 import { BsLinkedin, BsGithub, BsDiscord } from "react-icons/bs";
 import { AiFillHtml5, AiFillChrome, AiOutlineDown } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoPython } from "react-icons/io";
@@ -35,6 +36,8 @@ export default function Home() {
         (url: string): (() => void) =>
         () =>
             openNewTab(url);
+    const experienceDescription__1 = ["- To be updated"]
+    const experienceDescription__2 = ["- Delivered 5+ small to medium-scale projects within a month.", "- Developed Google Chrome extensions and Python automation scripts to enable continuous monitoring of E-commerce websites and automatic checkouts."]
     return (
         <main className={darkMode ? "dark bg-white" : ""}>
             <Navbar darkState={darkMode} setDarkState={updateDarkMode} />
@@ -144,22 +147,22 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="HTML">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <AiFillHtml5 size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="CSS">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoCss3 size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="JavaScript">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoJavascript size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Chrome Extension API">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <AiFillChrome size={20} />
                                 </span>
                             </Tooltip>
@@ -211,17 +214,17 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="React Native">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <FaReact size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="JavaScript">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoJavascript size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Supabase">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <SiSupabase size={20} />
                                 </span>
                             </Tooltip>
@@ -275,12 +278,12 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="Python">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoLogoPython size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="Discord API">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <BsDiscord size={20} />
                                 </span>
                             </Tooltip>
@@ -333,17 +336,17 @@ export default function Home() {
                         </Typography>
                         <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                             <Tooltip content="C++">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <TbBrandCpp size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="ESP32">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <IoHardwareChipOutline size={20} />
                                 </span>
                             </Tooltip>
                             <Tooltip content="MC-32 Door Sensor">
-                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-800 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                                <span className="cursor-pointer rounded-full border dark:border-blue-300/25 border-blue-500/5 bg-blue-500/5 p-3 text-blue-600 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
                                     <MdOutlineSensorDoor size={20} />
                                 </span>
                             </Tooltip>
@@ -369,75 +372,16 @@ export default function Home() {
                     id="experience"
                     variant="h2"
                     color="white"
-                    className="font-montserrat font-thin text-center my-5 dark:text-black"
+                    className="font-montserrat font-normal text-center my-5 dark:text-black"
                 >
                     Experience
                 </Typography>
-                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem] dark:bg-cyan-100">
-                    <Typography
-                        variant="h4"
-                        color="white"
-                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-800"
-                    >
-                        Software Engineer Intern
-                    </Typography>
-                    <Typography
-                        color="white"
-                        className="font-montserrat font-medium text-center text-cyan-300 dark:text-blue-800"
-                    >
-                        Algo Foundry
-                    </Typography>
-                    <Typography
-                        color="white"
-                        className="font-montserrat font-medium text-center text-cyan-300 text-xs dark:text-blue-800"
-                    >
-                        2023 May - 2023 August
-                    </Typography>
-                    <Typography
-                        color="white"
-                        className="font-montserra font-medium text-center my-5 text-sm block dark:text-black"
-                    >
-                        - To be updated
-                    </Typography>
-                </div>
-                <div className="bg-dark-gray-lighter w-4/5 mx-auto rounded-md shadow-md p-5 my-10 max-w-[26rem] dark:bg-cyan-100">
-                    <Typography
-                        variant="h4"
-                        color="white"
-                        className="font-montserrat font-semibold text-center my-3 text-cyan-300 dark:text-blue-800"
-                    >
-                        Freelance Software Developer
-                    </Typography>
-                    <Typography
-                        color="white"
-                        className="font-montserrat font-medium text-center text-cyan-300 dark:text-blue-800"
-                    >
-                        Fiverr
-                    </Typography>
-                    <Typography
-                        color="white"
-                        className="font-montserrat font-medium text-center text-xs text-cyan-300 dark:text-blue-800"
-                    >
-                        2021 April - 2021 June
-                    </Typography>
-                    <Typography
-                        color="white"
-                        className="font-montserrat font-medium text-center my-5 text-sm block px-5 dark:text-black"
-                    >
-                        - Delivered 5+ small to medium-scale projects within a
-                        month.
-                    </Typography>
-                    <Typography
-                        color="white"
-                        className="font-montserrat font-medium text-center my-5 text-sm block px-5 dark:text-black"
-                    >
-                        - Developed Google Chrome extensions and Python
-                        automation scripts to enable continuous monitoring of
-                        E-commerce websites and automatic checkouts.
-                    </Typography>
-                </div>
+                <ExperienceCard title="Software Engineer Intern" company="Algo Foundry" startDate="May 2023" endDate="August 2023" description={experienceDescription__1}></ExperienceCard>
+                <ExperienceCard title="Freelance Software Developer" company="Fiverr" startDate="April 2021" endDate="June 2021" description={experienceDescription__2}></ExperienceCard>        
             </section>
             <CustomFooter></CustomFooter>
         </main>
     );
 }
+
+
