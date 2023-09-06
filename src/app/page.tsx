@@ -22,6 +22,7 @@ import {
     Button,
     Tooltip,
 } from "@material-tailwind/react";
+import ExtraExperienceCard from "./components/Extra-experience";
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
@@ -36,8 +37,8 @@ export default function Home() {
         (url: string): (() => void) =>
         () =>
             openNewTab(url);
-    const experienceDescription__1 = ["- To be updated"]
-    const experienceDescription__2 = ["- Delivered 5+ small to medium-scale projects within a month.", "- Developed Google Chrome extensions and Python automation scripts to enable continuous monitoring of E-commerce websites and automatic checkouts."]
+    const experienceDescription__1 = ["• Increased limit of pending transactions from 16 to unlimited via implementation of boxes storage.", "•	Optimised the loading time of user assets by >50% through Redis Caching.", "•	Designed testcases to increase code coverage to 100%.", "• Improved user experience by identifying bugs and refining application interface."]
+    const experienceDescription__2 = ["• Delivered 5+ small to medium-scale projects within a month.", "•	Developed Google Chrome extensions and Python automation scripts to enable continuous monitoring of E-commerce websites and automatic checkouts."]
     return (
         <main className={darkMode ? "dark bg-white" : ""}>
             <Navbar darkState={darkMode} setDarkState={updateDarkMode} />
@@ -374,10 +375,22 @@ export default function Home() {
                     color="white"
                     className="font-montserrat font-normal text-center my-5 dark:text-black"
                 >
-                    Experience
+                    Work Experience
                 </Typography>
-                <ExperienceCard title="Software Engineer Intern" company="Algo Foundry" startDate="May 2023" endDate="August 2023" description={experienceDescription__1}></ExperienceCard>
+                <ExperienceCard title="Software Engineer Intern" company="Undercurrent Capital Pte. Ltd. (Algo Foundry)" startDate="May 2023" endDate="August 2023" description={experienceDescription__1}></ExperienceCard>
                 <ExperienceCard title="Freelance Software Developer" company="Fiverr" startDate="April 2021" endDate="June 2021" description={experienceDescription__2}></ExperienceCard>        
+            </section>
+            <section>
+                <Typography
+                    id="external_activities"
+                    variant="h2"
+                    color="white"
+                    className="font-montserrat font-normal text-center my-5 dark:text-black"
+                >
+                    Extracurricular activities
+                </Typography>
+                <ExtraExperienceCard title="DSTA BrainHack 2023 CODE_EXP" award="Best Minimum Viable Prototype Award (Champions)" description={["Built a React Native mobile application that aims to enhance work experience by creating a more inclusive and enjoyable work experience."]}></ExtraExperienceCard>
+                <ExtraExperienceCard title="NUS LifeHack 2023" award="Finalists (Top 15)" description={["Built a web application that aims to promote workplace efficiency and increase work fulfillment."]}></ExtraExperienceCard>        
             </section>
             <CustomFooter></CustomFooter>
         </main>
