@@ -80,11 +80,11 @@ export default function Home() {
           </p>
           <div></div>
           <p className="font-montserrat font-normal text-sm my-8 max-w-2xl mx-auto lg:text-base dark:text-black">
-            Hi there! I'm Aden. My love for software engineering started with my
-            side hustle in sneaker reselling, where I found fun ways to combine
-            my technical skills with my hobbies. I'm currently looking for
-            full-time opportunities in software engineering and would love to
-            connect!
+            Hi there! I&apos;m Aden. My love for software engineering started
+            with my side hustle in sneaker reselling, where I found fun ways to
+            combine my technical skills with my hobbies. I&apos;m currently
+            looking for full-time opportunities in software engineering and
+            would love to connect!
           </p>
           <div className="flex justify-center">
             <a href="https://github.com/adenteo" target="_blank">
@@ -122,7 +122,7 @@ export default function Home() {
         className="font-montserrat font-normal text-center my-5  dark:text-black italic"
         id="projects_description"
       >
-        I've made a few little things. Here are some of them.
+        I&apos;ve made a few little things. Here are some of them.
       </Typography>
       <section className="p-8 grid lg:grid-cols-2 gap-y-10">
         <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-100">
@@ -453,8 +453,8 @@ export default function Home() {
           className="font-montserrat font-normal text-center my-5  dark:text-black italic"
           id="projects_description"
         >
-          I'm always looking for new opportunities to learn and grow, contact
-          me!
+          I&apos;m always looking for new opportunities to learn and grow,
+          contact me!
         </Typography>
         <ExperienceCard
           title="Software Engineer Intern"
