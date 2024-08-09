@@ -43,7 +43,7 @@ export default function ExtraExperienceCard({
       {description.map((item, key) => (
         <Typography
           color="white"
-          className="my-5 font-montserrat font-medium text-sm text-center text-white dark:text-black max-w-3dssssssssxl mx-auto w-4/5"
+          className="my-5 font-montserrat font-medium text-sm text-start text-white dark:text-black max-w-3xl mx-auto"
           key={key}
         >
           {item}

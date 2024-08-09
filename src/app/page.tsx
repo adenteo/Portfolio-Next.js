@@ -119,10 +119,10 @@ export default function Home() {
       <Typography
         variant="h5"
         color="white"
-        className="font-montserrat font-normal text-center my-5  dark:text-black italic"
+        className="font-montserrat font-normal text-center my-5 dark:text-black italic px-2"
         id="projects_description"
       >
-        I&apos;ve made a few little things. Here are some of them.
+        I&apos;ve made a few things. Here are some of them!
       </Typography>
       <section className="p-8 grid lg:grid-cols-2 gap-y-10">
         <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-100">
@@ -450,11 +450,11 @@ export default function Home() {
         <Typography
           variant="h5"
           color="white"
-          className="font-montserrat font-normal text-center my-5  dark:text-black italic"
+          className="font-montserrat font-normal text-center my-5  dark:text-black italic px-2"
           id="projects_description"
         >
           I&apos;m always looking for new opportunities to learn and grow,
-          contact me!
+          contact me if you have any!
         </Typography>
         <ExperienceCard
           title="Software Engineer Intern"
@@ -493,7 +493,7 @@ export default function Home() {
         <Typography
           variant="h5"
           color="white"
-          className="font-montserrat font-normal text-center my-5  dark:text-black italic"
+          className="font-montserrat font-normal text-center my-5  dark:text-black italic px-2"
           id="projects_description"
         >
           Joining hackathons with friends is always a fun experience for me!
