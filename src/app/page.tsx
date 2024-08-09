@@ -116,6 +116,14 @@ export default function Home() {
       >
         Projects
       </Typography>
+      <Typography
+        variant="h5"
+        color="white"
+        className="font-montserrat font-normal text-center my-5  dark:text-black italic"
+        id="projects_description"
+      >
+        I've made a few little things. Here are some of them.
+      </Typography>
       <section className="p-8 grid lg:grid-cols-2 gap-y-10">
         <Card className="max-w-[26rem] shadow-lg bg-dark-gray-lighter mx-auto dark:bg-cyan-100">
           <CardHeader
@@ -435,9 +443,18 @@ export default function Home() {
           id="experience"
           variant="h2"
           color="white"
-          className="font-montserrat font-normal text-center my-5 dark:text-black"
+          className="font-montserrat font-bold text-center my-5 dark:text-black"
         >
           Work Experience
+        </Typography>
+        <Typography
+          variant="h5"
+          color="white"
+          className="font-montserrat font-normal text-center my-5  dark:text-black italic"
+          id="projects_description"
+        >
+          I'm always looking for new opportunities to learn and grow, contact
+          me!
         </Typography>
         <ExperienceCard
           title="Software Engineer Intern"
@@ -469,9 +486,17 @@ export default function Home() {
           id="hackathons_and_awards"
           variant="h2"
           color="white"
-          className="font-montserrat font-normal text-center my-5 dark:text-black"
+          className="font-montserrat font-bold text-center my-5 dark:text-black"
         >
           Hackathons and Awards
+        </Typography>
+        <Typography
+          variant="h5"
+          color="white"
+          className="font-montserrat font-normal text-center my-5  dark:text-black italic"
+          id="projects_description"
+        >
+          Joining hackathons with friends is always a fun experience for me!
         </Typography>
         <ExtraExperienceCard
           title="OGP - Build For Good 2024"
